@@ -1,7 +1,7 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
-import {createSwitchNavigator} from "react-navigation-switch-transitioner";
+import { createSwitchNavigator } from "react-navigation-switch-transitioner";
 
 import LoginScreen from "../screens/login/Login";
 import GenreScreen from "../screens/playback/Genres";
@@ -25,9 +25,15 @@ const GenreNavigation = createStackNavigator({
     defaultNavigationOptions: defaultNavOptions
 });
 
+const PopularMoviesListNavigation = createStackNavigator({
+    PopularMovies: PopularMoviesScreen
+}, {
+    defaultNavigationOptions: defaultNavOptions
+});
+
 const PlayBackTabNavigation = createBottomTabNavigator({
     MovieList: GenreNavigation,
-    PopularMovies: PopularMoviesScreen
+    PopularMovieList: PopularMoviesListNavigation
 }, {
     defaultNavigationOptions: defaultNavOptions
 });
@@ -36,4 +42,4 @@ const BaseNavigation = createSwitchNavigator({
     Login: LoginScreen,
     Playback: PlayBackTabNavigation
 });
-export default createAppContainer(BaseNavigation);
+export default createAppContainer(PlayBackTabNavigation);
