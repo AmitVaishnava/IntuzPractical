@@ -42,4 +42,4 @@ const BaseNavigation = createSwitchNavigator({
     Login: LoginScreen,
     Playback: PlayBackTabNavigation
 });
-export default createAppContainer(PlayBackTabNavigation);
+export default createAppContainer(BaseNavigation);
