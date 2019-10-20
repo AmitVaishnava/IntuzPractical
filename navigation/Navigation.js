@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import { createSwitchNavigator } from "react-navigation-switch-transitioner";
 
 import LoginScreen from "../screens/login/Login";
-import GenreScreen from "../screens/playback/Genres";
+import GenreScreen from "../screens/playback/movielist/Genres";
 import PopularMoviesScreen from "../screens/playback/PopularMovies";
-import GenreDetailsScreen from "../screens/playback/GenreDetails";
+import GenreDetailsScreen from "../screens/playback/movielist/GenreDetails";
 
 import Colors from "../Constants/Colors";
 
