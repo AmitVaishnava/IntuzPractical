@@ -54,7 +54,7 @@ const GenreDetails = props => {
                 </View>
                 <View style={styles.details}>
                     <Text style={styles.title}>Title:{details.title}</Text>
-                    <Text style={styles.price}>Popularity: {details.popularity}</Text>
+                    <Text style={styles.popularity}>Popularity: {details.popularity}</Text>
                 </View>
                 <View style={styles.actions}>
                     <Text>Description:{details.overview}</Text>
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
         marginVertical: 2,
         fontFamily: "open-sans-bold",
     },
-    price: {
+    popularity: {
         fontSize: 14,
         color: "#888",
         fontFamily: "open-sans",
